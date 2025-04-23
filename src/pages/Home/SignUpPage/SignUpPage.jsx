@@ -26,19 +26,12 @@ const SignUpPage = () => {
     e.preventDefault();
     const res = await signup({
       email,
-      username,
+      name: username,
       password,
       confirmPassword,
     });
+    console.log(res.data);
     dispatch(setUser(res.data));
-    console.log("Form submitted:", {
-      email,
-      username,
-      password,
-      confirmPassword,
-    });
-
-    console.log(res.data.success);
 
     if (res.data.success === true) {
       toast.success("User registered successfully!");
