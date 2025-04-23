@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../../redux/features/User/UserSlice";
 import { useSignupMutation } from "../../../redux/features/Api/ApiSlice";
+import { Link } from "react-router-dom";
 
 const SignUpPage = () => {
   const dispatch = useDispatch();
@@ -43,6 +44,22 @@ const SignUpPage = () => {
 
   return (
     <div className="flex min-h-screen bg-[#0a0a20]">
+      <Link to={"/"}>
+        <div className="absolute top-8 left-8">
+          <div className="flex items-center">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#ff0099] to-[#0066ff] flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-[#080814] flex items-center justify-center text-white font-bold">
+                A
+              </div>
+            </div>
+            <span className="ml-2 text-white font-bold text-xl">
+              <span className="text-[#ff0099]">AD</span>
+              <span className="text-[#0066ff]">FUSION</span>
+              <span className="text-sm text-gray-400 ml-1">Labs</span>
+            </span>
+          </div>
+        </div>
+      </Link>
       {/* Left side with logo and illustration */}
       <div className="hidden md:flex md:w-1/2 flex-col items-center justify-center p-8 relative">
         {/* Illustration */}
